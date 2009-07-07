@@ -18,8 +18,13 @@ Creating a basic RESTful controller is as easy as...
 
   class PostsController < ResourceController::Base
   end
-  
-...or if you prefer, you can use the method-call syntax.  If you need to inherit from some other class, this syntax is definitely for you:
+
+...or if you need to inherit from some other class:
+
+  class PostsController < ResourceController::Base(AdminController)
+  end
+
+...or if you prefer, you can use the method-call syntax.:
 
   class PostsController < ApplicationController
     resource_controller
