@@ -1,3 +1,9 @@
+begin
+  require_dependency 'application_controller'
+rescue LoadError => e
+  require_dependency 'application'
+end
+
 module ResourceController
   
   # == ResourceController::Base
